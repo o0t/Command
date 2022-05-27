@@ -1,0 +1,180 @@
+
+
+echo [D-P]*
+echo [!D-P]*
+
+
+sysadmin@localhost:~$ echo [D-P]*                                    
+Desktop Documents Downloads Music Pictures Public                    
+sysadmin@localhost:~$ echo [!D-P]*                                   
+Templates Videos                                                     
+sysadmin@localhost:~$
+
+
+============================================================================================
+
+
+
+sysadmin@localhost:~$ ls                                                      
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos     
+sysadmin@localhost:~$ cp /etc/hosts hosts                                     
+sysadmin@localhost:~$ ls                                                      
+Desktop    Downloads  Pictures  Templates  hosts                              
+Documents  Music      Public    Videos                                        
+sysadmin@localhost:~$
+
+
+
+============================================================================================
+
+
+sysadmin@localhost:~$ rm hosts 
+sysadmin@localhost:~$ ls                                                 
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos     
+sysadmin@localhost:~$ cp -v /etc/hosts hosts
+`/etc/hosts' -> `hosts'                                      
+sysadmin@localhost:~$ ls                                                      
+Desktop    Downloads  Pictures  Templates  hosts                              
+Documents  Music      Public    Videos                                        
+sysadmin@localhost:~$
+
+
+
+Note that the -v switch displays the source and target when the cp command is executed:
+
+
+Source
+
+`/etc/hosts'-> `hosts'
+Target
+
+`/etc/hosts'-> `hosts'
+
+
+============================================================================================
+
+
+rm hosts
+ls
+cp –v /etc/hosts .
+ls
+
+
+sysadmin@localhost:~$ rm hosts 
+sysadmin@localhost:~$ ls                                                 
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos     
+sysadmin@localhost:~$ cp -v /etc/hosts .
+`/etc/hosts' -> `hosts'                                      
+sysadmin@localhost:~$ ls                                                      
+Desktop    Downloads  Pictures  Templates  hosts                              
+Documents  Music      Public    Videos                                        
+sysadmin@localhost:~$
+
+
+============================================================================================
+
+
+sysadmin@localhost:~$ rm hosts 
+sysadmin@localhost:~$ ls                                                 
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos     
+sysadmin@localhost:~$ cd /etc                                                 
+sysadmin@localhost:/etc$ ls -l hosts                                          
+-rw-r--r-- 1 root root 150 Jan 22 15:18 hosts                                 
+sysadmin@localhost:/etc$ cp -p hosts /home/sysadmin                           
+sysadmin@localhost:/etc$ cd                                                   
+sysadmin@localhost:~$ ls -l hosts                                             
+-rw-r--r-- 1 sysadmin sysadmin 150 Jan 22 15:18 hosts                         
+sysadmin@localhost:~$
+
+
+============================================================================================
+
+
+sysadmin@localhost:~$ rm hosts 
+sysadmin@localhost:~$ ls                                                 
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos     
+sysadmin@localhost:~$ cp -p /etc/hosts ~                                      
+sysadmin@localhost:~$ cp hosts newname                                        
+sysadmin@localhost:~$ ls -l hosts newname
+-rw-r--r-- 1 sysadmin sysadmin 150 Jan 22 15:18 hosts                         
+-rw-r--r-- 1 sysadmin sysadmin 150 Jan 22 16:29 newname                        
+sysadmin@localhost:~$ rm hosts newname                                        
+sysadmin@localhost:~$
+
+
+============================================================================================
+
+
+sysadmin@localhost:~$ mkdir Myetc                                             
+sysadmin@localhost:~$ cp -R /etc/udev Myetc                                   
+sysadmin@localhost:~$ ls -l Myetc                                             
+total 0                                                                       
+drwxr-xr-x 1 sysadmin sysadmin 32 Jan 22 16:35 udev                           
+sysadmin@localhost:~$ ls -lR Myetc                                            
+Myetc:                                                                        
+total 0                                                                       
+drwxr-xr-x 1 sysadmin sysadmin 32 Jan 22 16:35 udev                           
+                                                                              
+Myetc/udev:                                                                   
+total 4                                                                       
+drwxr-xr-x 1 sysadmin sysadmin  56 Jan 22 16:35 rules.d                       
+-rw-r--r-- 1 sysadmin sysadmin 218 Jan 22 16:35 udev.conf                     
+                                                                              
+Myetc/udev/rules.d:                                                           
+total 8                                                                       
+-rw-r--r-- 1 sysadmin sysadmin  306 Jan 22 16:35 70-persistent-cd.rules       
+-rw-r--r-- 1 sysadmin sysadmin 1157 Jan 22 16:35 README                       
+sysadmin@localhost:~$
+
+
+============================================================================================
+
+
+sysadmin@localhost:~$ ls                                                      
+Desktop    Downloads  Myetc     Public     Videos                             
+Documents  Music      Pictures  Templates                                     
+sysadmin@localhost:~$ rm -r Myetc                                             
+sysadmin@localhost:~$ ls                                                      
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos     
+sysadmin@localhost:~$
+
+
+Note that the rmdir command can also be used to delete directories, but only if the directory is empty (if it contains no files).
+
+Also note the -r option. This option removes directories and their contents recursively.
+
+
+============================================================================================
+
+
+
+touch premove
+ls
+mv premove postmove
+ls
+rm postmove
+
+
+Linux Command	                Description
+
+
+touch premove	                Creates an empty file called premove
+mv premove postmove	            This command “cuts” the premove file and “pastes” it to a file called postmove
+rm postmove	                    Removes postmove file
+
+
+
+sysadmin@localhost:~$ touch premove                                           
+sysadmin@localhost:~$ ls                                                      
+Desktop    Downloads  Pictures  Templates  premove                            
+Documents  Music      Public    Videos                                       
+sysadmin@localhost:~$ mv premove postmove                                     
+sysadmin@localhost:~$ ls                                                      
+Desktop    Downloads  Pictures  Templates  postmove                           
+Documents  Music      Public    Videos                                        
+sysadmin@localhost:~$
+
+
+
+============================================================================================
+
