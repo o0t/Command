@@ -1,0 +1,179 @@
+
+Viewing Man Pages
+
+
+
+man ls
+
+
+==============================================================
+
+
+General Commands
+System Calls
+Library Calls
+Special Files
+File Formats and Conventions
+Games
+Miscellaneous
+System Administration Commands
+Kernel Routines
+
+
+
+
+
+أوامر عامة
+مكالمات النظام
+مكالمات المكتبة
+ملفات خاصة
+صيغ الملفات واصطلاحات
+ألعاب
+متفرقات
+أوامر إدارة النظام
+إجراءات Kernel
+
+
+
+==============================================================
+
+
+sysadmin@localhost:~$ man zed                                          
+No manual entry for zed 
+
+
+
+sysadmin@localhost:~$ man passwd
+
+
+
+sysadmin@localhost:~$ man -f passwd                                    
+passwd (5)           - the password file                              
+passwd (1)           - change user password                           
+passwd (1ssl)        - compute password hashes     
+
+
+
+
+sysadmin@localhost:~$ man 5 passwd
+
+
+
+
+sysadmin@localhost:~$ man -k copy                                               
+cp (1)               - copy files and directories                               
+cpgr (8)             - copy with locking the given file to the password or gr...
+cpio (1)             - copy files to and from archives                          
+cppw (8)             - copy with locking the given file to the password or gr...
+dd (1)               - convert and copy a file                                  
+debconf-copydb (1)   - copy a debconf database                                  
+install (1)          - copy files and set attributes                            
+scp (1)              - secure copy (remote file copy program)                   
+ssh-copy-id (1)      - use locally available keys to authorize logins on a re...
+
+
+
+
+
+==============================================================================================
+
+
+sysadmin@localhost:~$ whatis ls                                              
+ls (1)               - list directory contents 
+ls (lp)              - list directory contents
+
+
+==============================================================================================
+
+
+
+sysadmin@localhost:~$ whereis ls 
+ls: /bin/ls /usr/share/man/man1p/ls.1.gz /usr/share/man/man1/ls.1.gz
+
+
+==============================================================================================
+
+Find Any File or Directory
+
+
+sysadmin@localhost:~$ locate gshadow                                   
+/etc/gshadow                                                           
+/etc/gshadow-                                                          
+/usr/include/gshadow.h                                                
+/usr/share/man/cs/man5/gshadow.5.gz                                   
+/usr/share/man/da/man5/gshadow.5.gz                                    
+/usr/share/man/de/man5/gshadow.5.gz                                    
+/usr/share/man/fr/man5/gshadow.5.gz                                    
+/usr/share/man/it/man5/gshadow.5.gz                                    
+/usr/share/man/man5/gshadow.5.gz                                       
+/usr/share/man/ru/man5/gshadow.5.gz                                   
+/usr/share/man/sv/man5/gshadow.5.gz                                    
+/usr/share/man/zh_CN/man5/gshadow.5.gz    
+
+
+
+
+sysadmin@localhost:~$ locate -c passwd                                 
+98
+
+
+sysadmin@localhost:~$ locate -c -b passwd                              
+83                      
+
+
+sysadmin@localhost:~$ locate -b "\passwd"                              
+/etc/passwd                                                                     
+/etc/pam.d/passwd                                                               
+/usr/bin/passwd                                                                 
+/usr/share/doc/passwd                                                           
+/usr/share/lintian/overrides/passwd
+
+==============================================================================================
+
+Viewing Info Documentation
+
+
+info command
+
+
+
+
+sysadmin@localhost:~$ info ls     
+
+
+
+==============================================================================================
+
+
+Using the Help Option
+
+
+
+sysadmin@localhost:~$  cat --help       
+
+
+==============================================================================================
+
+
+
+ man    
+
+
+==============================================================================================
+==============================================================================================
+
+
+sysadmin@localhost:~$ ls -R /etc/ppp
+/etc/ppp:
+ip-down.d  ip-up.d         
+
+/etc/ppp/ip-down.d:
+bind9
+
+/etc/ppp/ip-up.d:
+bind9
+
+
+
+==============================================================================================
+
