@@ -1,0 +1,222 @@
+This is the bash        ==      #!/bin/bash 
+
+
+ This is Commend Line For Linux or Mac 
+
+# open "http://www.google.com" 		// open Brwser to website Google
+# open -a safari			// open safari
+# open -a finder 			// open finder or Folder name 
+
+
+
+# touch 	// New File 
+
+# mkdir 	// New Folder 
+
+# cp 		// Copy and cp NameFile /Desktop 
+
+# rm -r 	// Delet
+
+# rmdir 	// Delet Folder 
+
+# mv 		// Move or Raname 	
+
+# which		// Where is Folder command Ex: " ls "
+
+# whatis 	// What is command Ex --help 
+
+# whereis	// Where is folder Command 
+
+# history 	// Read Ram For command line 
+
+# nano .bash_history  // For Edite history 
+
+# history -c 	// Deleted For File history 
+
+# control + r 	// Sersh in history
+
+# !! 		// return Last command line 
+
+# !command + speas  // Last command in command line 
+
+#!number 	// numbur for history command line 
+
+# cd ~                                 // Go to Last Dircion
+
+# $?		// if 0 is Ok Or 1 to 10000 This is No ok Error
+
+# wait 		// Waiting For up Ex :/
+
+# sudo shutdown -h +4     // For down system 
+
+
+
+
+# ls -l    or   ls -l Namefile				// For chmod and time 
+
+# ls -l file{1,2}.txt   				// one and two 
+
+# ls -l file{1..3}.txt 					// Fome One to Three
+
+
+
+------------------------------------------------------------------------------
+									
+   *  			// Replacement  The World |Ex: ls -l Test/f*.txt 
+   ?			// Replacement For Letter |Ex: ls Test/file?.txt
+   []			// For The rest of the word |Ex: ls Test/[f]*.txt 
+			
+  			Ex:  ls Test/[f]*.t??
+------------------------------------------------------------------------------
+
+ # alias 			// Shortcuts for commands
+ # alias c=clear		// Shortcuts for commands in session
+		
+  When writing the original command    "Command"   Or  \Command
+
+ # unalias Command  		// Delet Shortcuts  
+ # unalias -a 			// Delet All Shortcuts
+
+
+	Go cd ~   and Write The Command in Termanal 
+
+ # echo "alias c='clear'" >> .bashrc      // For Saved Shortcuts
+
+------------------------------------------------------------------------------
+  &&			// And 
+  ||			// or
+ 
+
+
+
+----------------------------------------------------------------
+			spas 
+----------------------------------------------------------------
+
+ printf "Create the \nSnapshot created\n"   // This spass Ok
+
+ echo "Create the snapshots\nSnapshot created\n" // This is No
+
+	or 
+	
+echo -e 		// print in first Line 
+
+----------------------------------------------------------------
+                        IF
+----------------------------------------------------------------
+Ex: 1
+----------------------
+if [    ] ; Then
+
+echo "  " 
+
+else
+
+echo "  " 
+
+fi
+
+Ex: 2 
+----------------------
+
+[    ] && echo "  " || echo "  "
+
+
+
+# if exists
+ [ -a /home/ran/Desktop/Notes.txt ] && echo "it's there "
+
+B# checking for blocks     Ex: C: or D 
+ [ -b /dev/sda1 ] && echo "Block found"
+
+# character special file 
+ [ -c /dev/tty0 ] && echo "Character found"
+
+# directory exists
+ [ -d /home/ran/ ] && echo "Found direcotry"
+
+# true if exists 
+ [ -e /home/ran/Desktop/Noot.txt ] && echo "File found "
+
+# if regular file 
+ [ -f /home/ran/Desktop/Noot.txt ] && echo "Regular file "
+
+# if symbolic link 
+ [ -h /home/ran/.mozilla ] && echo "Symbolic file found"
+
+# readable 
+ [ -r /home/ran/Desktop/Noot.txt ] && echo "File is Readable"
+
+# if greater than zero
+ [ -s /home/ran/Desktop/d.txt ] && echo "This is File < zero "
+
+# writable 
+ [ -w /home/ran/Desktop/ ] && echo "it's Writable "
+
+# exists and excutable 
+ [ -x /home/ran/Desktop/Shell.sh ] && echo "Found excutable"
+
+
+# owned by current user 
+ [ -O /home/ran/Desktop/d.txt ] && echo "Yes is yours" 
+
+# owned by current user group 
+ [ -G /home/ran/Desktop/d.txt ] && echo "Yes it's your group's"
+
+# if symbolic and file 
+ [ -L home/ran/Desktop/.theres ] && echo "Syembolic File found"
+
+# if there and been modified since last read 
+ [ -N home/ran/Desktop/d.txt ] && echo "modified"
+
+
+
+
+
+
+
+
+   STRING1 = STRING2	        //  STRING1 is equal to STRING2
+ 
+   STRING1 != STRING2	       // STRING1 is not equal to STRING2
+
+   INTEGER1 -eq INTEGER2	  //  INTEGER1 is numerically equal to INTEGER2
+
+   INTEGER1 -gt INTEGER2	 //  INTEGER1 is numerically greater than INTEGER2
+
+   INTEGER1 -lt INTEGER2	//  INTEGER1 is numerically less than INTEGER2
+
+
+
+
+
+
+----------------------------------------------------------------
+
+                               Function
+
+
+func()
+{
+    echo "This is Frome function"
+}
+
+func
+
+
+
+
+
+----------------------------------------------------------------
+                    parameters 
+----------------------------------------------------------------
+
+Ex1:
+
+echo "File  : " $0
+
+echo "Par : 1" $1
+echo "Par : 2" $2
+
+-------------------------
+
