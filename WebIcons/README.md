@@ -37,3 +37,61 @@ Copy-paste the stylesheet link into your head to load our CSS
 <i class='bx bxs-user'></i>
 <i class='bx bxl-facebook-square'></i>
 ```
+
+# Starter Templates 🛠
+
+Create an HTML document and copy-paste the starter template
+
+```bash
+ <!doctype html>
+ <html lang='en'>
+   <head>
+         <meta charset='utf-8'>
+         <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+         <!-- Boxicons CSS -->
+         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+         <title>Hello, Boxicons!</title>
+   </head>
+   <body>
+          <h1>Hello, Boxicons!</h1>
+          <i class='bx bx-hot'></i>
+          <i class='bx bxs-hot'></i>
+          <i class='bx bxl-facebook-square'></i>
+   </body>
+ </html>
+```
+
+A template for usage with the web component instead of icon font
+
+
+```bash
+     <!doctype html>
+     <html lang='en'>
+        <head>
+             <meta charset='utf-8'>
+             <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+             <!-- Boxicons JS -->
+             <link href='https://unpkg.com/boxicons@2.1.4/dist/boxicons.js' rel='stylesheet'>
+             <title>Hello, Boxicons!</title>
+        </head>
+        <body>
+            <h1>Hello, Boxicons!</h1>
+            <box-icon name='hot'></box-icon>
+            <box-icon type='solid' name='hot'></box-icon>
+            <box-icon type='logo' name='facebook-square'></box-icon>
+        </body>
+     </html>
+```
+
+![image](https://user-images.githubusercontent.com/94997828/196004357-bd10eeee-2f0f-4a97-acc6-7a51e9f405e2.png)
+
+
+----------------------------------------------------------
+## Styling
+
+![App Screenshot](https://user-images.githubusercontent.com/94997828/196004280-eb2d8df9-5b10-4bc0-a60d-a7f9b8a41234.png)
+
+----------------------------------------------------
+
+![image](https://user-images.githubusercontent.com/94997828/196004327-349a4603-c53a-4cbd-b787-82866a1c89e2.png)
+
